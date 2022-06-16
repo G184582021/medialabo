@@ -59,6 +59,7 @@ div.zentai {
   grid-gap: 100px;
 
   width: 500px;
+  background: bisque;
 }
 
 /*div.box {
@@ -69,12 +70,11 @@ div.zentai {
 
 div.daimei1 {
   background: #ff80eb;
+  border: 5px solid #367bff;
 }
 
 div.daimei2 {
   background: #ffd4f6;
 }
-/*
-div.daimei2 {
-  background: #e8d1a5;
-}
+
+
