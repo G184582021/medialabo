@@ -19,7 +19,14 @@ function hantei() {
     //        ページに表示する方法はまだ習っていないので
     //        判定結果はコンソールに出力すること
     console.log(kaisu + '回目の予想: ' + yoso);
-    
+
+    let face = "console.log";
+    let result = document.createElement('result');
+    img.setAttribute('src', face);
+
+    let d = document.querySelector('p#result');
+    d.insertAdjacentElement('beforeend', console.log);
+
     if (kaisu >= 4) {
         console.log('答えは' + kotae + 'でした。すでにゲームは終わっています。');
     } else if (kotae === yoso) {
