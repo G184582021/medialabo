@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  width: 80em;
+  width: 100em;
   margin: 0 auto;
 }
 
@@ -20,8 +20,16 @@ h2 {
   font-size: 3.2em;
 }
 
-pli {
-  font-size: 1.7em;
+h3 {
+  font-size: 2.3em;
+}
+
+h4 {
+  font-size: 1.8em;
+}
+
+p {
+  font-size: 1.5em;
 }
 
 /*+++ more specific section styles +++*/
@@ -52,13 +60,13 @@ main p, main li {
   line-height: 2;
 }
 
-div.zentai {
+div.zentai1 {
   display: grid;
-  grid-template-columns: 2fr 2fr;
-  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 3fr 3fr;
+  grid-template-rows: 160px 160px 160px;
   grid-gap: 100px;
 
-  width: 500px;
+  width: 900px;
   background: bisque;
 }
 
@@ -77,4 +85,22 @@ div.daimei2 {
   background: #ffd4f6;
 }
 
+div.zentai2 {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 160px 160px ;
+  grid-gap: 100px;
 
+  width: 900px;
+  background: bisque;
+}
+
+div.zentai3 {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 160px 160px 160px;
+  grid-gap: 100px;
+
+  width: 900px;
+  background: bisque;
+}
