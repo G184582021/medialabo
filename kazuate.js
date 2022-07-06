@@ -20,24 +20,25 @@ function hantei() {
     //        判定結果はコンソールに出力すること
     console.log(kaisu + '回目の予想: ' + yoso);
 
-    let face = "console.log";
-    let result = document.createElement('result');
-    img.setAttribute('src', face);
-
+    
     let d = document.querySelector('p#result');
-    d.insertAdjacentElement('beforeend', console.log);
 
     if (kaisu >= 4) {
-        console.log('答えは' + kotae + 'でした。すでにゲームは終わっています。');
+        let a = "答えは" + kotae + "でした。すでにゲームは終わっています。";
+        d.insertAdjacentElement('beforeend', a);
     } else if (kotae === yoso) {
-        console.log('正解です。おめでとう!');
+        let a = '正解です。おめでとう!';
+        d.insertAdjacentElement('beforeend', a);
     } else if (kotae !== yoso) {  
         if (kaisu === 3) {
-            console.log('まちがい。残念でした答えは' + kotae +  'です．');
+            let a = 'まちがい。残念でした答えは' + kotae +  'です．';
+            d.insertAdjacentElement('beforeend', a);
         } else if (kotae > yoso) {
-            console.log('まちがい。答えはもっと大きいですよ');
+            let a = 'まちがい。答えはもっと大きいですよ';
+            d.insertAdjacentElement('beforeend', a);
         } else if (kotae < yoso) {
-            console.log('まちがい。答えはもっと小さいですよ');
+            let a = 'まちがい。答えはもっと小さいですよ';
+            d.insertAdjacentElement('beforeend', a);;
         }
     }
 }
