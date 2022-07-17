@@ -1,0 +1,51 @@
+
+html {
+    font-family: sans-serif;
+  }
+  
+  div:first-of-type {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 5px;
+  }
+  
+  label {
+    margin-right: 15px;
+    line-height: 32px;
+  }
+  
+  input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+  
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    margin-right: 5px;
+  
+    position: relative;
+    top: 4px;
+  }
+  
+  button:hover,
+  button:focus {
+    color: #999;
+  }
+  
+  button.submit {
+    background-color: white;
+    color: black;
+    outline: 1px solid black;
+  }
+
+  div.button {
+    width: 200px;
+    padding: 10px;
+    margin: 20px;
+  
+    border: 10px inset #ffd700;
+  }
