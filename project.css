@@ -1,40 +1,39 @@
 
 html {
     font-family: sans-serif;
+    background-color: #799bd3; 
   }
-  
+  /*
   div:first-of-type {
     display: flex;
     align-items: flex-start;
     margin-bottom: 5px;
   }
-  
+  */
   label {
-    margin-right: 15px;
-    line-height: 32px;
+    margin-right: 8px;
+    line-height: 20px;
   }
   
   input {
+    /*
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-  
-    border-radius: 50%;
-    width: 16px;
+    */
+
+    border-radius: 200%;
+    width: 50px;
     height: 16px;
   
-    border: 2px solid #999;
+    border: 10px solid #999;
     transition: 0.2s all linear;
-    margin-right: 5px;
+    margin-right: 8px;
   
-    position: relative;
     top: 4px;
   }
   
-  button:hover,
-  button:focus {
-    color: #999;
-  }
+  
   
   button.submit {
     background-color: white;
@@ -43,9 +42,13 @@ html {
   }
 
   div.button {
-    width: 200px;
+    width: 900px;
     padding: 10px;
     margin: 20px;
   
-    border: 10px inset #ffd700;
+    
+  }
+
+  .aa {
+    display:block;
   }

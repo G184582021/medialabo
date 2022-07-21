@@ -1,3 +1,4 @@
+
 let eu = document.querySelector('li#EU');
 eu.remove()
 
