@@ -77,6 +77,9 @@ function showResult(resp) {
 
   // data.x を出力
   console.log(data.x);
+
+  let kuni = document.querySelector('span#kuni');
+  kuni.textcontent = (data.weather.main);
 }
 
 // 通信エラーが発生した時の処理
