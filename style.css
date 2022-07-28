@@ -18,10 +18,16 @@ h1 {
 
 h2 {
   font-size: 3.2em;
+  border-bottom: double 5px #3b407e;
 }
 
 h3 {
   font-size: 2.3em;
+  padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+  color: #494949;/*文字色*/
+  background: #f4f4f4;/*背景色*/
+  border-left: solid 5px #7db4e6;/*左線*/
+  border-bottom: solid 3px #d7d7d7;/*下線*/
 }
 
 h4 {
@@ -36,10 +42,6 @@ p {
 
 /* header and footer */
 
-header, footer {
-  height: 10em;
-  padding: 2em;
-}
 
 h1, footer p {
   margin: 0px;
@@ -52,55 +54,70 @@ h1 {
 
 /* main content */
 
-main {
-  padding: 2em;
+div.daimei1 {
+    margin: 50px;
+    color: #364e96;/*文字色*/
+    padding: 0.5em 0;/*上下の余白*/
+    border-top: solid 3px #364e96;/*上線*/
+    border-bottom: solid 3px #364e96;/*下線*/
+  
 }
 
-main p, main li {
-  line-height: 2;
+div.box {
+  /*
+  display:inline-block;
+  border-style:dotted;
+  /*border-radius: 10px 0 10px 0;
+  background: bisque;
+  */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: calc(30em * (1.41421356237 - 1) / 2 );
+  width: 30em;
+  height: 30em;
+  border-radius: 50%;
+  background: pink;
+}
+
+div.naiyo {
+  display:inline-block;
+  border-style:dotted;
 }
 
 div.zentai1 {
   display: grid;
-  grid-template-columns: 3fr 3fr;
-  grid-template-rows: 160px 160px 160px;
+  grid-template-columns: 3fr 3fr; 
   grid-gap: 100px;
-
-  width: 900px;
-  background: bisque;
-}
-
-/*div.box {
-  background: cyan;
-}
-*/
-
-
-div.daimei1 {
-  background: #ff80eb;
-  border: 5px solid #367bff;
-}
-
-div.daimei2 {
-  background: #ffd4f6;
+  width: 1000px;
 }
 
 div.zentai2 {
+  display:inline-block;
   display: grid;
-  grid-template-columns: 2fr 2fr;
-  grid-template-rows: 160px 160px ;
+  grid-template-columns: 2fr 2fr;  
   grid-gap: 100px;
-
-  width: 900px;
-  background: bisque;
+  width: 1000px;
 }
 
 div.zentai3 {
   display: grid;
   grid-template-columns: 2fr 2fr;
-  grid-template-rows: 160px 160px 160px;
   grid-gap: 100px;
+  width: 1000px;
+}
 
-  width: 900px;
-  background: bisque;
+div.zentai4 {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 100px;
+  width: 1000px;
+}
+
+div.zentai5 {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 100px;
+  width: 1000px;
 }

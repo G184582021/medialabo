@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>My test page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <script src="weather.js" defer></script>
     <link rel="stylesheet" href="project.css">
   </head>
@@ -60,23 +61,33 @@
           ロサンゼルス</label>
         </div>
 
-        <div>
-          <button type="submit">検索</button>
-        </div>
+       
+        
       </div>
         
-
+      <p><button id="submit">検索</button></p>
 
     </table>
 
     <div class="abc">
       <h1>世界の天気</h1>
-      <span id="kuni"></span>
+        <div class="def">
+        <h2><span id="kuni"></span></h2>
+        </div>
+        <table broder="1" class="a" cellspacing="10">
+          <tr>
+            <th>天気</th>
+            <th>最高気温</th>
+            <th>湿度</th>
+          </tr>
+          <tr>
+            <td><span id="tenki" class="b"></span></td>
+            <td><span id="saikion" class="b"></span>℃</td>
+            <td><span id="situdo" class="b"></span>%</td>
+          </tr>
 
-    <div class="def">
-      <ul>
+        </table>
         
-      </ul>
     </div>
 
 
@@ -84,3 +95,4 @@
 
     </div>
   </body>
+</html>

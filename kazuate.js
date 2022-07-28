@@ -1,6 +1,6 @@
 // 答え
 let kotae = Math.floor(Math.random()*10) + 1;
-console.log('答え: ' + kotae);      // デバッグ用
+console.log('答え（デバッグ用）: ' + kotae);      // デバッグ用
 
 // 入力回数（予想回数）
 let kaisu = 0;
@@ -10,17 +10,18 @@ let b = document.querySelector('#print');
 
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() { 
-    kaisu = kaisu + 1;      
-    
+       
     let i = document.querySelector('input[name="seisuu"]');
-    let l = i.value - 0;
-        
-    let k = document.querySelector('span#answer');
+    let v = i.value - 0;
+    let yoso = v;
+    kaisu = kaisu + 1;     
+
+    let k = document.querySelector('span#kaisu');
     k.textContent = kaisu + '回目の予想: ';
 
-    let y = document.querySelector('span#answer1');
-    y.textContent = l;
-
+    let y = document.querySelector('span#yosou');
+    y.textContent = yoso;
+      
     let s = document.querySelector('p#result');
 
     if (kaisu >= 4) {

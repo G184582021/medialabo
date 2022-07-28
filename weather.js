@@ -3,14 +3,14 @@ let data = {
     "lon": 116.3972,
     "lat": 39.9075
   },
-  "weather": [
+  "weather": 
     {
       "id": 803,
       "main": "Clouds",
       "description": "曇りがち",
       "icon": "04d"
     }
-  ],
+  ,
   "base": "stations",
   "main": {
     "temp": 9.94,
@@ -51,43 +51,69 @@ console.log(data.name);
 console.log(data.main.temp_max);
 console.log(data.main.temp_min);
 
-function sendRequest() {
-  // URL を設定
-  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/{id}.json';
 
-  // 通信開始
-  axios.get(url)
-      .then(showResult)   // 通信成功
-      .catch(showError)   // 通信失敗
-      .then(finish);      // 通信の最後の処理
+let b = document.querySelector('#submit');
+b.addEventListener('click', sendRequest);
+
+
+// 通信を開始する処理
+function sendRequest() {
+
+  let rs = document.querySelectorAll('input[name="contact"]');
+  for (let r of rs) {
+    if (r.checked) {        // r が選択されていたら
+        kuni = r.id;
+    }
+  }
+	// URL を設定
+	let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + kuni + '.json';
+
+	// 通信開始
+	axios.get(url)
+		.then(showResult)
+		.catch(showError)
+		.then(finish);
 }
 
 // 通信が成功した時の処理
 function showResult(resp) {
-  // サーバから送られてきたデータを出力
-  let data = resp.data;
+	// サーバから送られてきたデータを出力
+	let data = resp.data;
 
-  // data が文字列型なら，オブジェクトに変換する
-  if (typeof data === 'string') {
-      data = JSON.parse(data);
-  }
+	// data が文字列型なら，オブジェクトに変換する
+	if (typeof data === 'string') {
+		data = JSON.parse(data);
+	}
 
-  // data をコンソールに出力
-  console.log(data.weather);
+	// data をコンソールに出力
+	console.log(data.name);
+  
 
-  // data.x を出力
-  console.log(data.x);
+	// data.x を出力
+	console.log(data.main.temp_max);
 
-  let kuni = document.querySelector('span#kuni');
-  kuni.textcontent = (data.weather.main);
+  let e = document.querySelector('span#kuni');
+  e.textContent = (data.name);
+
+  let a = document.querySelector('span#tenki');
+  a.textContent = (data.weather[0].description);
+  /*th.insertAdjacentElement('beforeend', a);*/
+
+  let b = document.querySelector('span#saikion');
+  b.textContent = (data.main.temp_max);
+  /*th.insertAdjacentElement('beforeend', b);*/
+
+  let c = document.querySelector('span#situdo');
+  c.textContent = (data.main.humidity);
+  /*th.insertAdjacentElement('beforeend', c);*/
 }
 
 // 通信エラーが発生した時の処理
 function showError(err) {
-  console.log(err);
-}
+	console.log(err);
+}	
 
 // 通信の最後にいつも実行する処理
 function finish() {
-  console.log('Ajax 通信が終わりました');
+	console.log('Ajax 通信が終わりました');
 }
